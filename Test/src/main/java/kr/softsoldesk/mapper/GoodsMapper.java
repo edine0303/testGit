@@ -10,7 +10,7 @@ public interface GoodsMapper {
 	@Insert("insert into goods_table values(goods_seq.nextval, #{goods_name}, #{goods_price}, #{goods_store})")
 	void addGoods(GoodsBean goodsBean);
 	
-	//상품호출
+	//상품호출..
 	
 	
 }//interface
