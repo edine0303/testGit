@@ -12,7 +12,7 @@ public class GoodsDAO {
 	@Autowired
 	private GoodsMapper goodsMapper;
 	
-	//상품 저장
+	//상품등록
 	public void addGoods(GoodsBean goodsBean) {
 		goodsMapper.addGoods(goodsBean);
 	}

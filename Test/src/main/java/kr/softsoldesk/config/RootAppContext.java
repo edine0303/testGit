@@ -34,13 +34,6 @@ public class RootAppContext { //프로젝트 작업 시 사용할 bean을 관리
 	@Value("${db.password}")
 	private String db_password;
 	
-	@Bean("memberBean")
-	@SessionScope //session 영역
-	@Lazy //memberBean을 호출하는 시점에서 객체를 생성
-	public MemberBean memberBean() {
-		return new MemberBean();
-	}
-	
 	//데이터베이스 접속정보 관리 Bean
 	@Bean
 	public BasicDataSource dataSource() {
@@ -65,7 +58,7 @@ public class RootAppContext { //프로젝트 작업 시 사용할 bean을 관리
 		return factory;
 	}
 	
-	//Mapper 등록_1
+	//Mapper 등록_1(회원)
 	@Bean
 	public MapperFactoryBean<MemberMapper> getMemberMapper(SqlSessionFactory factory) throws Exception {
 		
@@ -75,7 +68,7 @@ public class RootAppContext { //프로젝트 작업 시 사용할 bean을 관리
 		return factoryBean;
 	}
 	
-	//Mapper 등록_2
+	//Mapper 등록_2(상품)
 	@Bean
 	public MapperFactoryBean<GoodsMapper> getGoodsMapper(SqlSessionFactory factory) throws Exception {
 		
