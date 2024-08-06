@@ -8,6 +8,8 @@ public class GoodsBean {
 	private String goods_price;
 	private String goods_store;
 	
+	private String test;
+	
 	public int getGoods_idx() {
 		return goods_idx;
 	}
